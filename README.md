@@ -1,12 +1,12 @@
-<p align="center">SCHOOLPEDIA</p>
+<h1 align="center">SCHOOLPEDIA </h1>
 
 <p align="center">MENJELAJAH RAGAM SEKOLAH AREA MALANG MELALUI WEBSITE INFORMATIVAKTIF</p>
 
 ## Team Profile 
 
--Ahmad Dare Maftuhin 215150601111004
--Martvelino Tri Wijanarko 215150607111006
--Muhammad Adzinul Hakim 215150601111007
+    -Ahmad Dare Maftuhin 215150601111004
+    -Martvelino Tri Wijanarko 215150607111006
+    -Muhammad Adzinul Hakim 215150601111007
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
