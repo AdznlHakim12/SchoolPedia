@@ -2,25 +2,11 @@
 
 <p align="center">MENJELAJAH RAGAM SEKOLAH AREA MALANG MELALUI WEBSITE INFORMATIVAKTIF</p>
 
-## Team Profile 
-
-- **Ahmad Dare Maftuhin - 215150601111004**
-- **Martvelino Tri Wijanarko - 215150607111006**
-- **Muhammad Adzinul Hakim - 215150601111007**
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
 ## Installation
 The following steps will guide you through the installation process of StuBaby for running in a development environment locally on your machine:
 
 1. **Clone the latest version of SchoolPedia from the repository**
-2. **Run #composer install# to install the required PHP dependencies**
+2. **Run ##composer install## to install the required PHP dependencies**
 3. **Copy the .env.example file to .env and edit the database credentials according to your database server**
 4. **Run php artisan key:generate to generate a new application key**
 5. **Run php artisan migrate to create the database tables. You can also add the --seed flag to seed the database with some dummy data**
