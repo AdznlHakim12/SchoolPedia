@@ -4,11 +4,9 @@
 
 ## Team Profile 
 
-    -Ahmad Dare Maftuhin 215150601111004
-    -Martvelino Tri Wijanarko 215150607111006
-    -Muhammad Adzinul Hakim 215150601111007
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Ahmad Dare Maftuhin - 215150601111004**
+- **Martvelino Tri Wijanarko - 215150607111006**
+- **Muhammad Adzinul Hakim - 215150601111007**
 
 ## Learning Laravel
 
@@ -18,9 +16,18 @@ You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you
 
 If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## Installation
+The following steps will guide you through the installation process of StuBaby for running in a development environment locally on your machine:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+1. **Clone the latest version of StuBaby from the repository**
+2. **Run composer install to install the required PHP dependencies**
+Copy the .env.example file to .env and edit the database credentials according to your database server
+Run php artisan key:generate to generate a new application key
+Run php artisan migrate to create the database tables. You can also add the --seed flag to seed the database with some dummy data
+Run php artisan serve to start the development server
+Open another terminal and run npm install to install the required node modules
+Run npm run dev to compile the assets for development
+Open your browser and go to http://localhost:8000 to view the application
 
 ### Premium Partners
 
