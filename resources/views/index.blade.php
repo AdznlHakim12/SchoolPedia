@@ -37,7 +37,8 @@ body {
 }
 
 .logo img {
-  max-width: 150px; /* Adjust as needed */
+  max-width: 200px; /* Adjust as needed */
+  margin-top: 68px;
 }
 
 .nav-links {
@@ -126,11 +127,9 @@ main {
   -webkit-box-orient: vertical;
 }
 
-.hero a {
-}
 
 .hero-logo img {
-  max-width: 150px;
+  max-width: 300px;
 }
 
 .btn {
@@ -187,7 +186,7 @@ main {
 }
 
 .benefit {
-    background-color: #f0f0f0;
+    background-color: #DBDBDB;
     padding: 40px 0;
 }
 
@@ -198,7 +197,7 @@ main {
 }
 
 .benefit-logo img {
-    max-width: 150px;
+    max-width: 300px;
 }
 
 .benefit-text {
@@ -267,12 +266,37 @@ main {
 /* ... */
 
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+.footer {
+    background-color: #1d5d9b;
+    padding: 20px 0;
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-text p {
+    max-width: 300px;
+    margin: 10px 0;
+}
+
+.footer-social img {
+    max-width: 30px;
+    margin: 0 10px;
+}
+
+.footer-contact span {
+    display: block;
+    margin: 5px 0;
+}
+
   </style>
 
   <body>
@@ -281,7 +305,7 @@ footer {
         <div class="header-content">
           <div class="logo">
             <img
-              src="{{ asset('img/logo.png') }}"
+              src="{{ asset('img/SchoolPedia.png') }}"
               alt="SchoolPedia Logo"
             />
           </div>
@@ -350,48 +374,27 @@ footer {
         <div class="container">
           <div class="benefit-content">
             <div class="benefit-logo">
-              <img
-                src="{{ asset('img/logo.png') }}"
-                alt="SchoolPedia Logo"
-              />
+              <img src="{{ asset('img/logo.png') }}" alt="SchoolPedia Logo" />
             </div>
             <div class="benefit-text">
               <h2>Benefit website</h2>
-              <img
-                src="{{ asset('images/benefit-image-1.jpg') }}"
-                alt="Benefit Image 1"
-                class="benefit-image"
-              />
-              <p>
-                Informasi Sekolah Terpadu: SchoolPedia memberikan akses mudah ke
-                informasi lengkap tentang berbagai sekolah, membantu pengguna
-                dalam memilih sekolah yang sesuai dengan kebutuhan mereka.
-              </p>
-              <img
-                src="{{ asset('images/benefit-image-2.jpg') }}"
-                alt="Benefit Image 2"
-                class="benefit-image"
-              />
-              <p>
-                Transparansi Pendidikan: Pengguna dapat dengan cepat memeriksa
-                prestasi sekolah, fasilitas, dan informasi penting lainnya,
-                meningkatkan transparansi dalam dunia pendidikan.
-              </p>
-              <img
-                src="{{ asset('images/benefit-image-3.jpg') }}"
-                alt="Benefit Image 3"
-                class="benefit-image"
-              />
-              <p>
-                Kemudahan Pengambilan Keputusan: Informasi yang disajikan
-                membantu pengguna membuat keputusan pendidikan yang
-                terinformasi, memungkinkan mereka untuk merencanakan masa depan
-                pendidikan dengan lebih baik.
-              </p>
+
+              <ul>
+                <li>
+                  <p>Informasi Sekolah Terpadu: SchoolPedia memberikan akses mudah ke informasi lengkap tentang berbagai sekolah, membantu pengguna dalam memilih sekolah yang sesuai dengan kebutuhan mereka.</p>
+                </li>
+                <li>
+                  <p>Transparansi Pendidikan: Pengguna dapat dengan cepat memeriksa prestasi sekolah, fasilitas, dan informasi penting lainnya, meningkatkan transparansi dalam dunia pendidikan.</p>
+                </li>
+                <li>
+                  <p>Kemudahan Pengambilan Keputusan: Informasi yang disajikan membantu pengguna membuat keputusan pendidikan yang terinformasi, memungkinkan mereka untuk merencanakan masa depan pendidikan dengan lebih baik.</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
+
 
       <section class="our-team">
         <div class="container">
@@ -399,11 +402,11 @@ footer {
           <div class="team-members">
             <div class="team-member">
               <img
-                src="{{ asset('images/team-member-1.jpg') }}"
-                alt="John Doe"
+                src="{{ asset('img/Marvel.jpg') }}"
+                alt="Martvelino Tri"
               />
               <h3>Martvelino Tri Wijanarko</h3>
-              <p>Web Developer</p>
+              <p>215150607111006</p>
               <p>
                 John is a skilled web developer with a passion for creating
                 interactive and user-friendly websites.
@@ -411,11 +414,11 @@ footer {
             </div>
             <div class="team-member">
               <img
-                src="{{ asset('images/team-member-2.jpg') }}"
-                alt="Jane Smith"
+                src="{{ asset('img/Dare.jpeg') }}"
+                alt="Ahmad Dare"
               />
-              <h3>Muhammad Adzinul Hakim</h3>
-              <p>UX/UI Designer</p>
+              <h3>Ahmad Dare Maftuhim</h3>
+              <p>215150601111004</p>
               <p>
                 Jane is a talented UX/UI designer with a keen eye for creating
                 visually appealing and intuitive designs.
@@ -423,11 +426,11 @@ footer {
             </div>
             <div class="team-member">
               <img
-                src="{{ asset('images/team-member-3.jpg') }}"
-                alt="Bob Johnson"
+                src="{{ asset('img/Adzin.jpeg') }}"
+                alt="Mugammad Adzinul"
               />
-              <h3>Ahmad Dare Maftuhim</h3>
-              <p>Software Engineer</p>
+              <h3>Muhammad Adzinul Hakim</h3>
+              <p>215150601111007</p>
               <p>
                 Bob is a dedicated software engineer who loves solving complex
                 problems and building scalable applications.
@@ -440,10 +443,40 @@ footer {
     </main>
     <!-- ... -->
 
-    <footer>
-      <div class="container">
-        <p>&copy; 2023 SchoolPedia. All rights reserved.</p>
-      </div>
-    </footer>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img
+                        src="{{ asset('img/Logo.png') }}"
+                        alt="SchoolPedia Logo"
+                    />
+                </div>
+                <p>Jelajah ragam sekolah wilayah Malang Raya melalui website informatif.</p> <br>
+                <div class="footer-social">
+                    <p>
+                        <img src="{{ asset('images/instagram-icon.png') }}" alt="Instagram Logo">
+                        <img src="{{ asset('images/facebook-icon.png') }}" alt="Facebook Logo">
+                        <img src="{{ asset('images/twitter-icon.png') }}" alt="Twitter Logo">
+                    </p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-contact">
+                  <h3>Hubungi Kami :</h3>
+                    <p>
+                        <span>Jl. Veteran, Ketawanggede, Lowokwaru, Kota Malang, Jawa Timur.</span>
+                        <span>+6281234567890</span>
+                        <span>SchoolPedia@gmail.com</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
   </body>
 </html>
