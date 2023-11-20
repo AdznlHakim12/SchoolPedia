@@ -281,7 +281,7 @@ footer {
         <div class="header-content">
           <div class="logo">
             <img
-              src="{{ asset('images/schoolpedia-logo.png') }}"
+              src="{{ asset('img/logo.png') }}"
               alt="SchoolPedia Logo"
             />
           </div>
@@ -328,7 +328,7 @@ footer {
             </div>
             <div class="hero-logo">
               <img
-                src="{{ asset('images/schoolpedia-logo.png') }}"
+                src="{{ asset('img/logo.png') }}"
                 alt="SchoolPedia Logo"
               />
             </div>
@@ -351,7 +351,7 @@ footer {
           <div class="benefit-content">
             <div class="benefit-logo">
               <img
-                src="{{ asset('images/schoolpedia-logo.png') }}"
+                src="{{ asset('img/logo.png') }}"
                 alt="SchoolPedia Logo"
               />
             </div>
