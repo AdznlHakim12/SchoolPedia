@@ -26,6 +26,10 @@ Route::get('/findLocation', function () {
     return view('findLocation');
 });
 
+Route::get('/findSchool', function () {
+    return view('findSchool');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

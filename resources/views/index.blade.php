@@ -379,8 +379,8 @@ main {
                 <span>sekolah di seluruh wilayah Kota Malang.</span>
               </p>
               <div class="hero-buttons">
-                <a href="#" class="btn">Cari Sekolah</a>
-                <a href="#" class="btn">Lihat Lokasi</a>
+                <a href="/findSchool" class="btn">Cari Sekolah</a>
+                <a href="/findLocation" class="btn">Lihat Lokasi</a>
                 <a href="#" class="btn">Peringkat Sekolah</a>
               </div>
             </div>
