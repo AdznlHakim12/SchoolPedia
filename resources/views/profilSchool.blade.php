@@ -80,7 +80,7 @@
         <div class="block sm:hidden">
             <a
                 href="#"
-                class="block md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
+                class="block" md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
                 @click="open = !open"
             >
                 Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>

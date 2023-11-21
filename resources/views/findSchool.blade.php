@@ -109,7 +109,7 @@
 <div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
     Cari Sekolahmu
 </div>
-<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
+<div class="w-full text-gray-700 md:text-center text-5xl text-base-6 py-4">
     Form untuk mencari sekolah.
 </div>
 
