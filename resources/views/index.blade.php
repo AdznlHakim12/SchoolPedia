@@ -36,6 +36,37 @@ body {
   align-items: center;
 }
 
+.hero-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.hero-buttons a {
+    margin-right: 10px;
+}
+
+.hero-buttons a.btn {
+    background-color: #1d5d9b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons a.btn {
+    background-color: #1d5d9b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-buttons a.btn:hover {
+    background-color: #144173;
+}
+
 .logo img {
   max-width: 200px; /* Adjust as needed */
   margin-top: 68px;
@@ -63,6 +94,10 @@ body {
   border-radius: 5px;
   margin-left: 10px;
   cursor: pointer;
+}
+
+.search button:hover{
+  color: #0066cc; /* Mengganti warna teks saat dihover */
 }
 
 /* header h1 {
@@ -298,9 +333,11 @@ main {
 }
 
   </style>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 
   <body>
-    <header>
+  @include('components.header')
+    <!-- <header>
       <div class="container">
         <div class="header-content">
           <div class="logo">
@@ -309,26 +346,23 @@ main {
               alt="SchoolPedia Logo"
             />
           </div>
-          <div class="nav-links">
-            <nav>
-              <ul>
-                <li><a href="#">Cari Sekolah</a></li>
-                <li><a href="#">Lihat Lokasi</a></li>
-                <li><a href="#">Peringkat Sekolah</a></li>
-              </ul>
-            </nav>
-          </div>
+          <div class="hero-buttons"> -->
+                    <!-- <a href="#" class="btn">Cari Sekolah</a> -->
+                    <!-- <a href="#" class="btn">Login Admin</a>
+                    <a href="#" class="btn">Lihat Lokasi</a>
+                    <a href="#" class="btn">Peringkat Sekolah</a>
+                </div>
           <div class="search">
             <input type="text" placeholder="Cari Sekolah..." />
             <button>Cari</button>
           </div>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- ... -->
     <main>
-      <section class="hero">
+      <section class="hero bg-blue-500">
         <div class="container">
           <div class="hero-content">
             <div class="hero-text">
@@ -443,7 +477,7 @@ main {
     </main>
     <!-- ... -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
     <div class="container">
         <div class="footer-content">
             <div class="footer-left">
@@ -474,9 +508,9 @@ main {
             </div>
         </div>
     </div>
-</footer>
+</footer> -->
 
-
+@include('components.footer')
 
   </body>
 </html>
