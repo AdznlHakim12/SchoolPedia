@@ -30,6 +30,10 @@ Route::get('/findSchool', function () {
     return view('findSchool');
 });
 
+Route::get('/profilSchool', function () {
+    return view('profilSchool');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

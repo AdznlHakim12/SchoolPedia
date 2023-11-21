@@ -399,7 +399,7 @@ main {
           <h2>CARI SEKOLAH</h2>
           <div class="search">
             <input type="text" placeholder="Nama Sekolah" />
-            <a href="/findSchool">
+            <a href="/profilSchool">
             <button class="btn-large">Cari</button>
             </a>
           </div>
