@@ -16,6 +16,16 @@
             font-family: 'Poppins', sans-serif;
             background-color: #FFF7D4;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     </style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -23,9 +33,9 @@
     @include('components.header')
 
     <!--body-->
-    <div class="flex flex-col items-center">
+    <div class="container">
         <!--judul-->
-        <div class="mt-20 w-full text-black-700 text-5xl font-semibold py-1 mb-3">
+        <div class="mt-20 w-full text-black-700 text-5xl font-semibold py-1 mb-3 text-center">
             Find Your School
         </div>
         <!--judul-->
@@ -46,14 +56,8 @@
         </div> 
         <!--Search Bar-->
 
-        <!-- Result -->
-        <div class="w-2/4 text-gray-900 md:text-left t text-2xl font-bold py-1 pl-20 mb-2">
-            Search results :  <span>SMAN 2 Malang</span>
-        </div>
-        <h5 class="md:text-left text-2xl font-bold text-gray-900"></h5>
-
         <!--card-->
-        <div class="flex justify-center mb-5">
+        <div class="cards-container mb-5">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                 <!-- card 1-->
                 <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
@@ -66,7 +70,7 @@
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 2 Malang</h5>
                         </a>
-                        <p class="font-normal text-gray-700">Location: Malang</p>
+                        <p class="font-normal text-gray-700">Location: Klojen</p>
                         <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
                         <br>
                         <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
@@ -76,6 +80,50 @@
                     </div>
                 </div>
                 <!-- Tambahkan card sekolah lainnya sesuai kebutuhan -->
+                <!-- card 2 -->
+        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+                <div class="aspect-w-4 aspect-h-3">
+                    <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat5.jpg') }}" style="height: 200px; width: 300px;"/>
+                </div>
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 3 Malang</h5>
+                </a>
+                <p class="font-normal text-gray-700">Location: Lowokwaru</p>
+                <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
+                <br>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+                    View Location
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>
+        <!-- card 2 -->
+
+        <!-- card 3 -->
+        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
+            <a href="#">
+                <div class="aspect-w-4 aspect-h-3">
+                    <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat6.jpg') }}" style="height: 200px; width: 300px;"/>
+                </div>
+            </a>
+            <div class="p-5">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 4 Malang</h5>
+                </a>
+                <p class="font-normal text-gray-700">Location: Sukun</p>
+                <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
+                <br>
+                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
+                    View Location
+                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+        </div>
+        <!-- card 3 -->
+        
             </div>
         </div>
         @include('components.footer')

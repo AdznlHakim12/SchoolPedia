@@ -20,7 +20,7 @@
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
                 My Pet
             </a>
-            <div class="relative ml-auto mx-5">
+            <!-- <div class="relative ml-auto mx-5">
                 <div class="relative inline-block">
                     <a href="#"
                         class="inline-block" text-yellow-400 bg-white no-underline text-center h-10 w-10 rounded-full flex items-center justify-center transform hover:scale-105 duration-300 ease-in-out"
@@ -36,7 +36,7 @@
                             class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sign Out</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
