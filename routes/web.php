@@ -22,8 +22,8 @@ Route::get('/getIndex', function () {
     return view('Index');
 });
 
-Route::get('/findSchool', function () {
-    return view('findSchool');
+Route::get('/findLocation', function () {
+    return view('findLocation');
 });
 
 Route::get('/dashboard', function () {
