@@ -15,7 +15,7 @@
     <div class="w-full flex items-center justify-between">
         <div class="flex items-center">
             <a class="flex items-center text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl ml-5"
-                href=" ">
+                href="/getIndex">
                 <!-- <img src="{{ asset('img/SchoolPedia.png') }}" alt="SchoolPedia Logo"> -->
                 <!-- <x-application-logo class="block h-8 pr-2 w-auto fill-current" /> -->
                 <span class="font-semibold text-lg md:text-xl">S C H O O L P E D I A</span>
@@ -51,7 +51,7 @@
                             class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sign Out</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
