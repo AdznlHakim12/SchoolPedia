@@ -27,7 +27,7 @@
                 Lihat Lokasi
             </a>
 
-            <a href="/findSchool" class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
+            <a href="/findLocation" class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
                 <button>Cari Sekolah</button>
             </a>
 
