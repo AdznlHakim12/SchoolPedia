@@ -22,7 +22,7 @@
             </a>
         </div>
         <div class="flex items-center space-x-4 px-6">
-            <a href="#"
+            <a href="findLocation"
                 class="inline-block text-white no-underline text-center h-10 p-2 md:h-auto md:p-4 transform hover:scale-105 duration-300 ease-in-out">
                 Lihat Lokasi
             </a>

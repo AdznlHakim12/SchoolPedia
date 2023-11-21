@@ -1,133 +1,160 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Find Your School</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/61cc44f0a1.js" crossorigin="anonymous"></script>
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #FFF7D4;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
         }
-        .container {
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Menetapkan tinggi elemen ke 100% tinggi viewport */
+            padding: 20px 0; /* Perpendek jarak bagian atas dan bawah */
+        }
+        
+        .image-row {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 0px; /* Perpendek jarak antara baris */
+            gap: 5px; /* Perpendek jarak antara elemen-elemen child */
+        }
+        
+        .image-box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: flex-end;
+            text-align: center;
         }
-        .cards-container {
+        
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .image-box .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+        
+        .image-box:hover .overlay {
+            opacity: 1;
+        }
+        
+        .image-box .overlay-content {
+            color: #fff;
+            text-align: center;
+        }
+        
+        .image-box .overlay-content a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .image-box .overlay-content a:hover {
+            text-decoration: underline;
+        }
+
+        .center{
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #C07F00;
         }
     </style>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <title>Cari Sekolahmu</title>
 </head>
+
 <body>
-    @include('components.header')
+@include('components.header');
 
-    <!--body-->
-    <div class="container">
-        <!--judul-->
-        <div class="mt-20 w-full text-black-700 text-5xl font-semibold py-1 mb-3 text-center">
-            Find Your School
-        </div>
-        <!--judul-->
+<!--body-->
+<div class="w-full text-gray-700 md:text-center text-5xl font-semibold pt-20">
+    Cari Sekolahmu
+</div>
+<div class="w-full text-gray-700 md:text-center text-5xl text-base/6 py-4">
+    Form untuk mencari sekolah.
+</div>
 
-        <!--Search Bar-->
-        <div class="container w-1/2 mx-left pl-20 px-4 mb-5">
-            <form class="flex items-center">   
-                <label for="default-search" class="mr-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                <div class="relative flex-1">
-                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg aria-hidden="true" class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                    </div>
-                    <input type="search" id="default-search" class="w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-400 focus:border-yellow-500" 
-                    placeholder="Input school name" required style="width: 430px;">
-                    <button type="submit" class="ml-2 text-black bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-lg px-6 py-3">Find</button>
-                </div>
-            </form>
-        </div> 
-        <!--Search Bar-->
+<div class="container w-1/2 mx-auto px-4">
+    <form  method="POST" enctype="multipart/form-data">
+        @csrf
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div>
+                <label for="nama" class="mb-2 text-sm font-medium text-gray-900 sr-only">Nama Sekolah</label>
+                <input type="text" id="nama" name="nama" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Nama Sekolah" required>
+            </div>
 
-        <!--card-->
-        <div class="cards-container mb-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                <!-- card 1-->
-                <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
-                    <a href="#">
-                        <div class="aspect-w-4 aspect-h-3">
-                            <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat4.jpg') }}" style="height: 200px; width: 300px;"/>
-                        </div>
-                    </a>
-                    <div class="p-5">
-                        <a href="#">
-                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 2 Malang</h5>
-                        </a>
-                        <p class="font-normal text-gray-700">Location: Klojen</p>
-                        <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
-                        <br>
-                        <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-                            View Location
-                            <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
+            <div>
+                <label for="alamat" class="mb-2 text-sm font-medium text-gray-900 sr-only">Alamat</label>
+                <input type="text" id="alamat" name="alamat" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500" 
+                    placeholder="Alamat" required>
+            </div>
+
+            <div>
+                <label for="jenis_kelamin" class="mb-2 text-sm font-medium text-gray-900 sr-only">Kecamatan</label>
+                <div class="relative inline-block w-full text-gray-700">
+                    <select id="jenis_kelamin" name="jenis_kelamin" class="w-full p-4 pl-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-yellow-500 focus:border-yellow-500">
+                        <option value="" disabled selected>Kecamatan</option>
+                        <option value="Blimbing">Blimbing</option>
+                        <option value="Kedungkandang">Kedungkandang</option>
+                        <option value="Klojen">Klojen</option>
+                        <option value="Lowokwaru">Lowokwaru</option>
+                        <option value="Sukun">Sukun</option>
+                    </select>
                 </div>
-                <!-- Tambahkan card sekolah lainnya sesuai kebutuhan -->
-                <!-- card 2 -->
-        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
-            <a href="#">
-                <div class="aspect-w-4 aspect-h-3">
-                    <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat5.jpg') }}" style="height: 200px; width: 300px;"/>
-                </div>
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 3 Malang</h5>
-                </a>
-                <p class="font-normal text-gray-700">Location: Lowokwaru</p>
-                <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
-                <br>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-                    View Location
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
             </div>
         </div>
-        <!-- card 2 -->
 
-        <!-- card 3 -->
-        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow">
-            <a href="#">
-                <div class="aspect-w-4 aspect-h-3">
-                    <img class="object-cover object-center rounded-t-lg h-full w-full" src="{{ asset('/img/cat6.jpg') }}" style="height: 200px; width: 300px;"/>
-                </div>
-            </a>
-            <div class="p-5">
-                <a href="#">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">SMAN 4 Malang</h5>
-                </a>
-                <p class="font-normal text-gray-700">Location: Sukun</p>
-                <!-- Tambahkan informasi sekolah lainnya sesuai kebutuhan -->
-                <br>
-                <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-yellow-400 rounded-lg hover:bg-yellow-500">
-                    View Location
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <!-- card 3 -->
-        
-            </div>
-        </div>
-        @include('components.footer')
-    </div>
-    <!-- card-->
+        <button type="submit" class="text-white bg-yellow-400 hover:bg-yellow-500 font-medium rounded-lg text-sm px-4 py-2 mt-4">
+            Kirim
+        </button>
+    </form>
+
+    @if(session('success'))
+        @include('article.success-popup')
+    @endif
+</div>
+
+@include('components.footer')
 </body>
+
 </html>

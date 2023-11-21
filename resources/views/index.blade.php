@@ -379,8 +379,8 @@ main {
                 <span>sekolah di seluruh wilayah Kota Malang.</span>
               </p>
               <div class="hero-buttons">
-                <a href="#" class="btn">Cari Sekolah</a>
-                <a href="#" class="btn">Lihat Lokasi</a>
+                <a href="/findSchool" class="btn">Cari Sekolah</a>
+                <a href="/findLocation" class="btn">Lihat Lokasi</a>
                 <a href="#" class="btn">Peringkat Sekolah</a>
               </div>
             </div>
@@ -399,7 +399,9 @@ main {
           <h2>CARI SEKOLAH</h2>
           <div class="search">
             <input type="text" placeholder="Nama Sekolah" />
+            <a href="/findSchool">
             <button class="btn-large">Cari</button>
+            </a>
           </div>
         </div>
       </section>
@@ -442,8 +444,7 @@ main {
               <h3>Martvelino Tri Wijanarko</h3>
               <p>215150607111006</p>
               <p>
-                John is a skilled web developer with a passion for creating
-                interactive and user-friendly websites.
+                Lahir pada tanggal 24 Maret 2003, dan bertempat tinggal asli di Kediri, Jawa Timur.
               </p>
             </div>
             <div class="team-member">
@@ -454,8 +455,7 @@ main {
               <h3>Ahmad Dare Maftuhim</h3>
               <p>215150601111004</p>
               <p>
-                Jane is a talented UX/UI designer with a keen eye for creating
-                visually appealing and intuitive designs.
+                Lahir pada tanggal 8 Julis 2002, dan bertempat tinggal asli di Kab. Kediri, Jawa Timur.
               </p>
             </div>
             <div class="team-member">
@@ -466,8 +466,7 @@ main {
               <h3>Muhammad Adzinul Hakim</h3>
               <p>215150601111007</p>
               <p>
-                Bob is a dedicated software engineer who loves solving complex
-                problems and building scalable applications.
+                Lahir pada tanggal 13 Agustus 2003, dan bertempat tinggal asli di Kab. Blitar, Jawa Timur.
               </p>
             </div>
             <!-- Tambahkan anggota tim lainnya sesuai kebutuhan -->
