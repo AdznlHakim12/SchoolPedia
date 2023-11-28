@@ -38,6 +38,9 @@ Route::get('/profilSchool', function () {
     return view('profilSchool');
 });
 
+Route::get('/admin/tambahSekolah', function () {
+    return view('admin/tambahSekolah');})->name('tambahSekolah');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
